@@ -12,7 +12,6 @@ namespace SimpleLegends
 {
     public class Game1 : Game
     {
-
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
@@ -23,11 +22,11 @@ namespace SimpleLegends
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             graphics.IsFullScreen = false;
-            graphics.PreferredBackBufferHeight = 288;
+            graphics.PreferredBackBufferHeight = 512;
             graphics.PreferredBackBufferWidth = 512;
             IsMouseVisible = true;
-            Window.IsBorderless = true;
 
+            Window.IsBorderless = true;
         }
 
         protected override void Initialize()
@@ -43,7 +42,7 @@ namespace SimpleLegends
 
             debugfont = Content.Load<SpriteFont>("debugfont");
 
-            ContentImages.Load(this);
+            ContentSpriteSheets.Load(this);
 
             Debugger.StartDebugger(debugfont);
 
@@ -54,7 +53,6 @@ namespace SimpleLegends
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-            CameraSystem.Move(-1, 0);
 
             EntityUpdater.Update(gameTime);
 
@@ -65,6 +63,7 @@ namespace SimpleLegends
         {
             GraphicsDevice.Clear(Color.Black);
 
+            InActiveEntityDrawManager.SendToRenderSystem();
             ActiveEntityDrawManager.SendToRenderSystem();
 
             RenderSprites.Draw(spriteBatch, GraphicsDevice);

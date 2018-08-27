@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 
 using SimpleLegends.Components;
+using SimpleLegends.Components.General_Components;
 using SimpleLegends.Components.General_Components.SubComponents;
 using SimpleLegends.Entities.General_Entities;
 
@@ -21,11 +22,18 @@ namespace SimpleLegends.Entities.General_Entities.Player_Entities
     {
         Hitbox CharacterHitbox;
 
-        public Character (GameTexture CharacterTexture, Position StartCaracterPosition, bool IsClickable, bool isInCameraWorld) : base(IsClickable, isInCameraWorld)
+        bool isMoveble;
+
+        Rating BaseStrengh;
+
+
+        public Character (GameTexture CharacterTexture, Position StartCaracterPosition,int BaseRating, bool IsClickable, bool isInCameraWorld) : base(IsClickable, isInCameraWorld)
         {
             GamePosition = new Position(StartCaracterPosition.Location.X, StartCaracterPosition.Location.Y);
 
             Graphic = new Sprite(CharacterTexture, GamePosition, 1.0f);
+
+            BaseStrengh = new Rating(BaseRating);
 
             ActiveEntityDrawManager.AddToRenderQueue(this);
         }

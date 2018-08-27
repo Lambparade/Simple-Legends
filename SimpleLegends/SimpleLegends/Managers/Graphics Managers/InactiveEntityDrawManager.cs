@@ -11,18 +11,18 @@ using Microsoft.Xna.Framework.Input;
 
 namespace SimpleLegends.Managers.Graphics_Managers
 {
-    public static class ActiveEntityDrawManager
+    public static class InActiveEntityDrawManager
     {
-        static List<ActiveEntity> EntitiesToManage = new List<ActiveEntity>();
+        static List<InActiveEntity> EntitiesToManage = new List<InActiveEntity>();
 
-        public static void AddToRenderQueue(ActiveEntity EntityToRender)
+        public static void AddToRenderQueue(InActiveEntity EntityToRender)
         {
                 EntitiesToManage.Add(EntityToRender);
         }
 
         public static void SendToRenderSystem()
         {
-            foreach (ActiveEntity s in EntitiesToManage)
+            foreach (InActiveEntity s in EntitiesToManage)
             {
                 if (s.InCameraWorld)
                 {
@@ -35,4 +35,5 @@ namespace SimpleLegends.Managers.Graphics_Managers
             }
         }
     }
+
 }

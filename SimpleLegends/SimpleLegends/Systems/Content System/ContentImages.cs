@@ -7,7 +7,7 @@ using SimpleLegends;
 
 namespace SimpleLegends.Systems.Content_System
 {
-    public static class ContentImages
+    public static class ContentSpriteSheets
     {
         public static Texture2D SpriteSheet { get; set; }
 
@@ -16,6 +16,7 @@ namespace SimpleLegends.Systems.Content_System
             SpriteSheet = CurrentGame.Content.Load<Texture2D>("TestSpriteSheet");
 
             ContentTexture.GenerateGameTextures();
+            ContentTexture.GenerateRenderTargetTextures(CurrentGame.GraphicsDevice);
         }
     }
 }
