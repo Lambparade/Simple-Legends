@@ -1,0 +1,13 @@
+C:\Users\robinson\Documents\Simple-Legends\SimpleLegends\SimpleLegends\bin\Debug\netcoreapp2.0\SimpleLegends.deps.json
+C:\Users\robinson\Documents\Simple-Legends\SimpleLegends\SimpleLegends\bin\Debug\netcoreapp2.0\SimpleLegends.runtimeconfig.json
+C:\Users\robinson\Documents\Simple-Legends\SimpleLegends\SimpleLegends\bin\Debug\netcoreapp2.0\SimpleLegends.runtimeconfig.dev.json
+C:\Users\robinson\Documents\Simple-Legends\SimpleLegends\SimpleLegends\bin\Debug\netcoreapp2.0\SimpleLegends.dll
+C:\Users\robinson\Documents\Simple-Legends\SimpleLegends\SimpleLegends\bin\Debug\netcoreapp2.0\SimpleLegends.pdb
+C:\Users\robinson\Documents\Simple-Legends\SimpleLegends\SimpleLegends\obj\Debug\netcoreapp2.0\SimpleLegends.csprojAssemblyReference.cache
+C:\Users\robinson\Documents\Simple-Legends\SimpleLegends\SimpleLegends\obj\Debug\netcoreapp2.0\SimpleLegends.csproj.CoreCompileInputs.cache
+C:\Users\robinson\Documents\Simple-Legends\SimpleLegends\SimpleLegends\obj\Debug\netcoreapp2.0\SimpleLegends.AssemblyInfoInputs.cache
+C:\Users\robinson\Documents\Simple-Legends\SimpleLegends\SimpleLegends\obj\Debug\netcoreapp2.0\SimpleLegends.AssemblyInfo.cs
+C:\Users\robinson\Documents\Simple-Legends\SimpleLegends\SimpleLegends\obj\Debug\netcoreapp2.0\SimpleLegends.dll
+C:\Users\robinson\Documents\Simple-Legends\SimpleLegends\SimpleLegends\obj\Debug\netcoreapp2.0\SimpleLegends.pdb
+C:\Users\robinson\Documents\Simple-Legends\SimpleLegends\SimpleLegends\bin\Debug\netcoreapp2.0\Content\debugfont.xnb
+C:\Users\robinson\Documents\Simple-Legends\SimpleLegends\SimpleLegends\bin\Debug\netcoreapp2.0\Content\TestSpriteSheet.xnb
