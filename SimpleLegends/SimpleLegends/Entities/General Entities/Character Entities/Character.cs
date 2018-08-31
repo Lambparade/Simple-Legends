@@ -49,7 +49,7 @@ namespace SimpleLegends.Entities.General_Entities.Player_Entities
                 Graphic.GraphicColor = Color.Black;
             }
 
-            PlaceGraphic(1, 5);
+            
         }
     }
 }

@@ -35,5 +35,4 @@ namespace SimpleLegends.Managers.Graphics_Managers
             }
         }
     }
-
 }

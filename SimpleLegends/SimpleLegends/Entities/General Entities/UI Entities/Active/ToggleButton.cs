@@ -20,6 +20,9 @@ namespace SimpleLegends.Entities.General_Entities.UI_Entities
     {
         Hitbox ButtonHitbox;
         public bool IsClicked;
+
+        public bool ToggleClick;
+
         public ToggleButton(GameTexture ButtonTexture, Position ButtonPosition, bool IsClickable, bool isInCameraWorld) : base (IsClickable, isInCameraWorld)
         {
             IsClicked = false;
@@ -35,7 +38,16 @@ namespace SimpleLegends.Entities.General_Entities.UI_Entities
         {
             ButtonHitbox = HitboxUpdater.UpdateHitbox(GamePosition,32,32,this.InCameraWorld);
 
-            IsClicked = ClickSystem.IsClickedOn(ButtonHitbox,this.InCameraWorld);
+            ToggleClick = ClickSystem.IsClickedOnToggle(ButtonHitbox,this.InCameraWorld,ToggleClick);
+
+            if (ToggleClick)
+            {
+                Graphic.GraphicColor = new Color(Color.OrangeRed, 255);
+            }
+            else
+            {
+                Graphic.GraphicColor = new Color(Color.Blue, 255);
+            }
         }
     }
 }

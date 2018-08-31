@@ -1,0 +1,7 @@
+create grid cordinate system
+
+Have a text box for character descriptions
+
+learn tcp to make a simple 1v1 setup
+
+

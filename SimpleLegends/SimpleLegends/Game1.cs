@@ -13,6 +13,7 @@ namespace SimpleLegends
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
+
         SpriteBatch spriteBatch;
 
         SpriteFont debugfont;
@@ -54,6 +55,8 @@ namespace SimpleLegends
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+                CameraSystem.Move(-1,0);
+
             EntityUpdater.Update(gameTime);
 
             base.Update(gameTime);
@@ -61,12 +64,29 @@ namespace SimpleLegends
 
         protected override void Draw(GameTime gameTime)
         {
+            ///MOVE RENDERTARGET TO DIFFERNET CLASS
             GraphicsDevice.Clear(Color.Black);
 
             InActiveEntityDrawManager.SendToRenderSystem();
             ActiveEntityDrawManager.SendToRenderSystem();
 
-            RenderSprites.Draw(spriteBatch, GraphicsDevice);
+            RenderTarget2D GameRenderTarget = new RenderTarget2D(GraphicsDevice, 512, 512);
+
+            GraphicsDevice.SetRenderTarget(GameRenderTarget);
+
+            GraphicsDevice.Clear(Color.Black);
+
+            SpriteBatch RenderspriteBatch = new SpriteBatch(GraphicsDevice);
+
+            RenderSprites.Draw(RenderspriteBatch, GraphicsDevice);
+
+            GraphicsDevice.SetRenderTarget(null);
+
+            spriteBatch.Begin();
+
+            spriteBatch.Draw(GameRenderTarget,new Vector2(0,0),Color.White);
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }

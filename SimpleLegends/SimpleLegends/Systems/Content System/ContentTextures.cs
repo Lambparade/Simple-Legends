@@ -42,7 +42,9 @@ namespace SimpleLegends.Systems.Content_System
             if (ContentSpriteSheets.SpriteSheet != null)
             {
                 RedBlock = new GameTexture(ContentSpriteSheets.SpriteSheet, new Rectangle(32, 0, 32, 32));
+
                 BlueBlock = new GameTexture(ContentSpriteSheets.SpriteSheet, new Rectangle(64, 400, 32, 32));
+
                 IndivualGrid = new GameTexture(ContentSpriteSheets.SpriteSheet, new Rectangle(0, 0, 32, 32));
             }
         }
